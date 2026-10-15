@@ -1,61 +1,220 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
+
 <head>
 <meta charset="UTF-8">
-<title>Сергей | 1С-разработчик</title>
+<title>1С Шпаргалка</title>
 
 <style>
+
 body{
+    margin:0;
     background:#121212;
     color:white;
-    font-family:Arial;
+    font-family:Arial, sans-serif;
+}
+
+.header{
+    background:#1e1e1e;
+    padding:15px;
+    position:sticky;
+    top:0;
+}
+
+.nav{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.nav a{
+    color:#4fc3f7;
+    text-decoration:none;
+    padding:8px 12px;
+    border-radius:8px;
+}
+
+.nav a:hover{
+    background:#333;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:30px;
+}
+
+h1{
     text-align:center;
-    margin-top:50px;
+}
+
+.links{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    margin-top:30px;
 }
 
 .card{
-    width:600px;
-    margin:auto;
-    background:#1f1f1f;
-    padding:30px;
-    border-radius:20px;
+    background:#1e1e1e;
+    padding:15px;
+    border-radius:15px;
 }
 
-.progress{
-    width:100%;
-    background:#333;
-    border-radius:10px;
-    overflow:hidden;
+.card a{
+    color:#4fc3f7;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.bar{
-    width:15%;
-    background:#4caf50;
-    height:30px;
+.card a:hover{
+    text-decoration:underline;
 }
+
 </style>
 
 </head>
 
 <body>
 
-<div class="card">
+<div class="header">
 
-<h1>Привет! 👋</h1>
-
-<h2>Меня зовут Сергей</h2>
-
-<p>Изучаю 1С и ищу первую работу программистом.</p>
-
-<h3>Собрано: 1500 ₽ из 10000 ₽</h3>
-
-<div class="progress">
-<div class="bar"></div>
+<div class="nav">
+<a href="#osnovy">Основы</a>
+<a href="#kollekcii">Коллекции</a>
+<a href="#sistema">Система</a>
 </div>
 
-<br>
+</div>
 
-<p>Спасибо за поддержку ❤️</p>
+<div class="container">
+
+<h1>Шпаргалка 1С</h1>
+
+<p align="center">
+Сборник полезных материалов по языку 1С.
+</p>
+
+<h2 id="osnovy">Основы</h2>
+
+<div class="links">
+
+<div class="card">
+<a href="https://helpme1s.ru/rabota-s-tipom-data-v-yazyke-1s-8-v-primerax" target="_blank">
+Дата
+</a>
+</div>
+
+<div class="card">
+<a href="https://helpme1s.ru/uslovnyj-operator-esli-v-yazyke-1s-8-v-primerax" target="_blank">
+Если
+</a>
+</div>
+
+<div class="card">
+<a href="https://helpme1s.ru/matematika-v-yazyke-1s-8-v-primerax" target="_blank">
+Математика
+</a>
+</div>
+
+<div class="card">
+<a href="https://helpme1s.ru/stroki-v-yazyke-1s-8-v-primerax" target="_blank">
+Строки
+</a>
+</div>
+
+<div class="card">
+<a href="https://helpme1s.ru/procedury-v-yazyke-1s-8-v-primerax" target="_blank">
+Процедуры
+</a>
+</div>
+
+<div class="card">
+<a href="https://helpme1s.ru/cikly-v-yazyke-1s-8-v-primerax" target="_blank">
+Циклы
+</a>
+</div>
+
+</div>
+
+<h2 id="kollekcii">Коллекции</h2>
+
+<div class="links">
+
+<div class="card">
+<a href="https://helpme1s.ru/massivy-v-yazyke-1s-8-v-primerax" target="_blank">
+Массивы
+</a>
+</div>
+
+<div class="card">
+<a href="https://helpme1s.ru/tip-sootvetstvie-v-yazyke-1s-8-v-primerax" target="_blank">
+Соответствие
+</a>
+</div>
+
+<div class="card">
+<a href="https://helpme1s.ru/tip-struktura-v-yazyke-1s-8-v-primerax" target="_blank">
+Структура
+</a>
+</div>
+
+<div class="card">
+<a href="https://helpme1s.ru/spisok-znachenij-v-yazyke-1s-8-v-primerax" target="_blank">
+СписокЗначений
+</a>
+</div>
+
+<div class="card">
+<a href="https://helpme1s.ru/tablica-znachenij-v-yazyke-1s-8-v-primerax" target="_blank">
+ТаблицаЗначений
+</a>
+</div>
+
+</div>
+
+<h2 id="sistema">Система</h2>
+
+<div class="links">
+
+<div class="card">
+<a href="https://helpme1s.ru/rabota-s-dialogami-v-yazyke-1s-8-v-primerax" target="_blank">
+Диалоги
+</a>
+</div>
+
+<div class="card">
+<a href="https://helpme1s.ru/opisanie-tipov-v-yazyke-1s-8-v-primerax" target="_blank">
+ОписаниеТипов
+</a>
+</div>
+
+<div class="card">
+<a href="https://helpme1s.ru/rabota-s-operacionnoj-sistemoj-v-yazyke-1s-8-v-primerax" target="_blank">
+ОперационнаяСистема
+</a>
+</div>
+
+<div class="card">
+<a href="https://helpme1s.ru/rabota-s-prilozheniem-v-yazyke-1s-8-v-primerax" target="_blank">
+Приложение
+</a>
+</div>
+
+<div class="card">
+<a href="https://helpme1s.ru/rabota-s-fajlovoj-sistemoj-v-yazyke-1s-8-v-primerax" target="_blank">
+ФайловаяСистема
+</a>
+</div>
+
+<div class="card">
+<a href="https://helpme1s.ru/funkciya-format-v-yazyke-1s-8-v-primerax" target="_blank">
+Формат
+</a>
+</div>
+
+</div>
 
 </div>
 
