@@ -1,97 +1,113 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
 <meta charset="UTF-8">
-<title>Конфигурация - Шпаргалка 1С</title>
+<title>Шпаргалка1С</title>
 
 <style>
 
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
     font-family:Tahoma, Arial, sans-serif;
     background:#d4d0c8;
 }
 
-.wrapper{
-    display:flex;
+.app{
     height:100vh;
+    display:flex;
 }
 
-.left{
-    width:320px;
-    background:#f0f0f0;
+.sidebar{
+    width:260px;
+    background:#efefef;
     border-right:1px solid #999;
-    overflow:auto;
 }
 
-.right{
-    flex:1;
-    background:white;
-    padding:20px;
-    overflow:auto;
-}
-
-.title{
-    background:#e5e5e5;
-    padding:8px;
+.sidebar-header{
+    height:24px;
+    background:#dfdfdf;
     border-bottom:1px solid #999;
-    font-weight:bold;
+    padding:4px 8px;
+    font-size:12px;
 }
 
 .tree{
-    padding:10px;
+    padding:6px;
+    font-size:12px;
 }
 
 .tree ul{
     list-style:none;
-    padding-left:20px;
+    padding-left:16px;
 }
 
 .tree li{
-    margin:6px 0;
+    margin:3px 0;
 }
 
 .tree a{
+    color:#000;
     text-decoration:none;
-    color:#000080;
 }
 
 .tree a:hover{
-    background:#316ac5;
+    background:#0a246a;
     color:white;
 }
 
-.comment{
-    color:green;
+.editor{
+    flex:1;
+    background:#f3f0df;
 }
 
-.keyword{
-    color:blue;
-    font-weight:bold;
-}
-
-.string{
-    color:brown;
+.tab{
+    height:24px;
+    background:#ece9d8;
+    border-bottom:1px solid #999;
+    padding:4px 10px;
+    font-size:12px;
 }
 
 .code{
+    padding:15px;
     font-family:Consolas, monospace;
-    line-height:1.8;
-    font-size:16px;
+    font-size:13px;
+    line-height:1.6;
+    background:white;
+    height:calc(100vh - 24px);
+    overflow:auto;
+}
+
+.comment{
+    color:#008000;
+}
+
+.keyword{
+    color:#0000ff;
+}
+
+.string{
+    color:#800000;
+}
+
+.method{
+    color:#000080;
 }
 
 </style>
-
 </head>
-
 <body>
 
-<div class="wrapper">
+<div class="app">
 
-<div class="left">
+<div class="sidebar">
 
-<div class="title">
+<div class="sidebar-header">
 Конфигурация
 </div>
 
@@ -101,51 +117,33 @@ body{
 
 <ul>
 
-<li>
-📄 massivy.htmlМассивы</a>
-</li>
-
-<li>
-📄 struktura.htmlСтруктура</a>
-</li>
-
-<li>
-📄 sootvetstvie.htmlСоответствие</a>
-</li>
-
-<li>
-📄 tablitsa.htmlТаблицаЗначений</a>
-</li>
-
-<li>
-📄 spisok.htmlСписокЗначений</a>
-</li>
-
-<li>
-📄 data.htmlДата</a>
-</li>
-
-<li>
-📄 esli.htmlЕсли</a>
-</li>
-
-<li>
-📄 cikly.htmlЦиклы</a>
-</li>
+<li>data.htmlДата</a></li>
+<li>esli.htmlЕсли</a></li>
+<li>cikly.htmlЦиклы</a></li>
+<li>stroki.htmlСтроки</a></li>
+<li>matematika.htmlМатематика</a></li>
+<li>procedury.htmlПроцедуры</a></li>
 
 </ul>
 
-📁 ПодготовкаКСобеседованию
+📁 Коллекции
 
 <ul>
 
-<li>
-📄 interview.htmlВопросы</a>
-</li>
+<li>massivy.htmlМассивы</a></li>
+<li>struktura.htmlСтруктура</a></li>
+<li>sootvetstvie.htmlСоответствие</a></li>
+<li>spisok.htmlСписокЗначений</a></li>
+<li>tablitsa.htmlТаблицаЗначений</a></li>
 
-<li>
-📄 practice.htmlПрактическиеЗадачи</a>
-</li>
+</ul>
+
+📁 Собеседование
+
+<ul>
+
+<li>interview.htmlВопросы</a></li>
+<li>tasks.htmlЗадачи</a></li>
 
 </ul>
 
@@ -153,9 +151,7 @@ body{
 
 <ul>
 
-<li>
-📄 projects.htmlМоиПроекты</a>
-</li>
+<li>projects.htmlМоиПроекты</a></li>
 
 </ul>
 
@@ -163,52 +159,60 @@ body{
 
 </div>
 
-<div class="right">
+<div class="editor">
+
+<div class="tab">
+Главная
+</div>
 
 <div class="code">
 
-<div class="comment">
-//---------------------------------------------------
+<span class="comment">
+//============================================================
 // Конфигурация: Шпаргалка1С
 // Автор: Сергей
-//---------------------------------------------------
-</div>
-
-<br>
-
-<span class="keyword">Процедура</span> ГлавнаяСтраница()
+//============================================================
+</span>
 
 <br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// О проекте</span>
-
-<br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;Сообщить(
-<span class="string">"Личная база знаний по 1С"</span>
-);
-
-<br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;Сообщить(
-<span class="string">"Конспекты, задачи и подготовка к работе"</span>
-);
+<span class="keyword">Процедура</span> Главная()
 
 <br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Тем изучено</span>
+&nbsp;&nbsp;<span class="comment">// О проекте</span>
 
 <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;КоличествоТем = 0;
+&nbsp;&nbsp;<span class="method">Сообщить</span>(<span class="string">"Личная база знаний по 1С"</span>);
+
+<br>
+
+&nbsp;&nbsp;<span class="method">Сообщить</span>(<span class="string">"Примеры кода, задачи и вопросы с собеседований"</span>);
 
 <br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Последнее обновление</span>
+&nbsp;&nbsp;<span class="comment">// Текущий прогресс</span>
 
 <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;ДатаОбновления = ТекущаяДата();
+&nbsp;&nbsp;ИзученоТем = 12;
+
+<br>
+
+&nbsp;&nbsp;РешеноЗадач = 0;
+
+<br>
+
+&nbsp;&nbsp;СтатейНаписано = 1;
+
+<br><br>
+
+&nbsp;&nbsp;<span class="comment">// Последнее обновление</span>
+
+<br>
+
+&nbsp;&nbsp;ДатаОбновления = <span class="method">ТекущаяДата</span>();
 
 <br><br>
 
@@ -221,5 +225,4 @@ body{
 </div>
 
 </body>
-
 </html>
