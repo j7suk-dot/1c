@@ -1,50 +1,84 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 <meta charset="UTF-8">
-<title>1С Шпаргалка</title>
+<title>Конфигурация - Шпаргалка 1С</title>
 
 <style>
 
 body{
-    background:#ffffff;
-    color:#000000;
-    font-family:Consolas, monospace;
-    max-width:1400px;
-    margin:auto;
-    padding:30px;
+    margin:0;
+    font-family:Tahoma, Arial, sans-serif;
+    background:#d4d0c8;
 }
 
-.code{
-    white-space:pre-wrap;
-    line-height:1.7;
-    font-size:18px;
+.wrapper{
+    display:flex;
+    height:100vh;
 }
 
-.comment{
-    color:#008000;
+.left{
+    width:320px;
+    background:#f0f0f0;
+    border-right:1px solid #999;
+    overflow:auto;
 }
 
-.keyword{
-    color:#0000ff;
+.right{
+    flex:1;
+    background:white;
+    padding:20px;
+    overflow:auto;
+}
+
+.title{
+    background:#e5e5e5;
+    padding:8px;
+    border-bottom:1px solid #999;
     font-weight:bold;
 }
 
-.func{
-    color:#800080;
+.tree{
+    padding:10px;
 }
 
-.str{
-    color:#a31515;
+.tree ul{
+    list-style:none;
+    padding-left:20px;
 }
 
-a{
-    color:#0000ff;
+.tree li{
+    margin:6px 0;
+}
+
+.tree a{
     text-decoration:none;
+    color:#000080;
 }
 
-a:hover{
-    background:#ffff99;
+.tree a:hover{
+    background:#316ac5;
+    color:white;
+}
+
+.comment{
+    color:green;
+}
+
+.keyword{
+    color:blue;
+    font-weight:bold;
+}
+
+.string{
+    color:brown;
+}
+
+.code{
+    font-family:Consolas, monospace;
+    line-height:1.8;
+    font-size:16px;
 }
 
 </style>
@@ -53,59 +87,139 @@ a:hover{
 
 <body>
 
+<div class="wrapper">
+
+<div class="left">
+
+<div class="title">
+Конфигурация
+</div>
+
+<div class="tree">
+
+📁 ОбщиеМодули
+
+<ul>
+
+<li>
+📄 massivy.htmlМассивы</a>
+</li>
+
+<li>
+📄 struktura.htmlСтруктура</a>
+</li>
+
+<li>
+📄 sootvetstvie.htmlСоответствие</a>
+</li>
+
+<li>
+📄 tablitsa.htmlТаблицаЗначений</a>
+</li>
+
+<li>
+📄 spisok.htmlСписокЗначений</a>
+</li>
+
+<li>
+📄 data.htmlДата</a>
+</li>
+
+<li>
+📄 esli.htmlЕсли</a>
+</li>
+
+<li>
+📄 cikly.htmlЦиклы</a>
+</li>
+
+</ul>
+
+📁 ПодготовкаКСобеседованию
+
+<ul>
+
+<li>
+📄 interview.htmlВопросы</a>
+</li>
+
+<li>
+📄 practice.htmlПрактическиеЗадачи</a>
+</li>
+
+</ul>
+
+📁 Проекты
+
+<ul>
+
+<li>
+📄 projects.htmlМоиПроекты</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="right">
+
 <div class="code">
 
-<span class="comment">// ====================================================</span>
-<span class="comment">// ЛичныйСправочник1С</span>
-<span class="comment">// Автор: Сергей</span>
-<span class="comment">// ====================================================</span>
+<div class="comment">
+//---------------------------------------------------
+// Конфигурация: Шпаргалка1С
+// Автор: Сергей
+//---------------------------------------------------
+</div>
+
+<br>
 
 <span class="keyword">Процедура</span> ГлавнаяСтраница()
 
-    <span class="comment">// Основы языка</span>
+<br><br>
 
-    • data.htmlДата()</a>;
-    • <a hrefmlЕсли()</a>;
-    • cikly.htmlЦиклы()</a>;
-    • <aroki.htmlСтроки()</a>;
-    • <a hrefika.htmlМатематика()</a>;
-    • <a href="proceduryедуры()</a>;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// О проекте</span>
 
-    <span class="comment">// Коллекции</span>
+<br>
 
-    • <a href="massivyивы()</a>;
-    • <a href=".htmlСтруктура()</a>;
-    • <aotvetstvie.htmlСоответствие()</a>;
-    • <a href="spisokzntmlСписокЗначений()</a>;
-    • <a href="tablitsaицаЗначений()</a>;
+&nbsp;&nbsp;&nbsp;&nbsp;Сообщить(
+<span class="string">"Личная база знаний по 1С"</span>
+);
 
-    <span class="comment">// Работа с данными</span>
+<br>
 
-    • <a href.htmlЗапрос()</a>;
-    • <a href="skd)</a>;
-    • <a href="registrстры()</a>;
+&nbsp;&nbsp;&nbsp;&nbsp;Сообщить(
+<span class="string">"Конспекты, задачи и подготовка к работе"</span>
+);
 
-    <span class="comment">// Собеседования</span>
+<br><br>
 
-    • <a hrefew.htmlВопросыИСобеседования()</a>;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Тем изучено</span>
 
-<span class="keyword">КонецПроцедуры</span>
+<br>
 
+&nbsp;&nbsp;&nbsp;&nbsp;КоличествоТем = 0;
 
+<br><br>
 
-<span class="keyword">Процедура</span> ОПроекте()
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Последнее обновление</span>
 
-    Сообщить(
-        <span class="str">"Справочник создается во время изучения 1С"</span>
-    );
+<br>
 
-    Сообщить(
-        <span class="str">"Каждая тема содержит теорию, примеры и задачи"</span>
-    );
+&nbsp;&nbsp;&nbsp;&nbsp;ДатаОбновления = ТекущаяДата();
+
+<br><br>
 
 <span class="keyword">КонецПроцедуры</span>
 
 </div>
 
+</div>
+
+</div>
+
 </body>
+
 </html>
